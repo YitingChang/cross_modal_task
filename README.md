@@ -22,26 +22,34 @@ o	The task structure was recorded via the Bcontrol system (.mat)
 ### Preprocessed data
 o	Neuron data and non-neuron data were extracted and combined in MSessionExplorer, a trial-based system for data organization. \
 o	Kilosort 1 was used for spike sorting.\
-o	Session information including mouse name, date of birth, brain area was added to MSessionExplorer.\ 
-o	Code: [CM_preprocessing_silicon_probe.m] 
+o	Session information including mouse name, date of birth, brain area was added to MSessionExplorer.\
+o	Code: [CM_preprocessing_silicon_probe.m](CM_preprocessing_silicon_probe.m) 
 ### Processed data
 o	A table contains processed data for each session.\
-o	firingRate: firing rates were organized in a multidimensional array (neuron, block, stimulus, decision, time, trial) with size(N, B, S, D, T, K). Unit: Hz. Options include bin size and smooth window for Gaussian filter.\  
+o	firingRate: \
+Firing rates were organized in a multidimensional array (neuron, block, stimulus, decision, time, trial) with size(N, B, S, D, T, K). Unit: Hz. Options include bin size and smooth window for Gaussian filter.\  
   -- The analyses for sensory-evoked activity use 10 ms bin with Gaussian smooth (50 ms window)\
   -- The analyses for initial activity use 100 ms bin without Gaussian smooth.\
-o	trialNum: total trial numbers were organized in a multidimensional array (neuron, block, stimulus, decision, trial) with size (N, B, S, D, K).\
-o	earlyTrans: boolean array (1: early transition). For each block, the early transition is defined as a window from the first trial of that block to the false alarm (included). It is organized in a multidimensional array (neuron, block, stimulus, decision, trial) with size(N,B,S,D,K).\
-o	lateTrans: boolean array (1: late transition). For each block, the late transition is defined as a window from the first false alarm to the first hit(not included). It is organized in a multidimensional array (neuron, block, stimulus, decision, trial) with size(N,B,S,D,K).\
-o	beforeCue: boolean array (1: before a transition cue). It is organized in a multidimensional array (neuron, block, stimulus, decision, trial) with size(N,B,S,D,K).\
-o	afterCue: boolean array (1: after a transition cue). It is organized in a multidimensional array (neuron, block, stimulus, decision, trial) with size(N,B,S,D,K).\
-o	behavPerformance: A table contains (1) the fractions of trial outcomes in respond-to-touch and respond-to-light blocks, (2) the fractions of correct trials in respond-to-touch blocks, respond-to-light blocks, a session.\
-o	firstHit: the trial number of a first hit after block switch.\   
+o	trialNum: \
+Total trial numbers were organized in a multidimensional array (neuron, block, stimulus, decision, trial) with size (N, B, S, D, K).\
+o	earlyTrans: \
+boolean array (1: early transition). For each block, the early transition is defined as a window from the first trial of that block to the false alarm (included). It is organized in a multidimensional array (neuron, block, stimulus, decision, trial) with size(N,B,S,D,K).\
+o	lateTrans:\ 
+boolean array (1: late transition). For each block, the late transition is defined as a window from the first false alarm to the first hit(not included). It is organized in a multidimensional array (neuron, block, stimulus, decision, trial) with size(N,B,S,D,K).\
+o	beforeCue: \
+boolean array (1: before a transition cue). It is organized in a multidimensional array (neuron, block, stimulus, decision, trial) with size(N,B,S,D,K).\
+o	afterCue: \
+boolean array (1: after a transition cue). It is organized in a multidimensional array (neuron, block, stimulus, decision, trial) with size(N,B,S,D,K).\
+o	behavPerformance:\
+A table contains (1) the fractions of trial outcomes in respond-to-touch and respond-to-light blocks, (2) the fractions of correct trials in respond-to-touch blocks, respond-to-light blocks, a session.\
+o	firstHit:\
+the trial number of a first hit after block switch.\   
 
 ## Analysis
-Scripts used to analyze the data and to generate figures in our preprint can be found in the figure folders.\
+Scripts used to analyze the data and to generate figures in our preprint can be found in the figure folders.
 \
 ## Contact
-Data will be available in [DANDI](https://www.dandiarchive.org/) soon.\
+Data will be available in [DANDI](https://www.dandiarchive.org/) soon.
 
 If you have any questions or want to request our datasets, please contact:\
 Yi-Ting Chang (ytchang[at]jhmi.edu)
