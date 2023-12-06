@@ -1,5 +1,5 @@
 
-## Figure 1. Cross-modal selection task and tHit-tCR selectivity
+## Figure 1. Touch-evoked activity of individual neurons is modulated by task rules.
 ### a.	Schematic of the cross-modal selection task.
 ### b.	Example behavioral session.
   -- Input: YT084_200124_se.mat (preprocessed data)\
