@@ -1,4 +1,4 @@
-## Figure 2. Decoding of task rule in individual neurons
+## Figure 2. Single-unit activity before stimulus delivery reflects task rules.
 ### a.	Example units
   -- Input:  YT071_190721_se.mat (preprocessed data) unit 19, EF0151_190506_se.mat (preprocessed data) unit 108\
   -- Code: [CM_RasterPlot_baseline.m](CM_RasterPlot_baseline.m)
