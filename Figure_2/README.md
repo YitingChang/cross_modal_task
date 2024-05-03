@@ -1,10 +1,10 @@
 ## Figure 2. Single-unit activity before stimulus delivery reflects task rules.
 ### a.	Example units
   -- Input:  YT071_190721_se.mat (preprocessed data) unit 19, EF0151_190506_se.mat (preprocessed data) unit 108\
-  -- Code: [CM_RasterPlot_baseline.m](CM_RasterPlot_baseline.m)
+  -- Code: [CM_RasterPlot_prestim.m](CM_RasterPlot_prestim.m)
 ### b.	Heatmap of normalized baseline activity
   -- Input: data_array_100msBin.mat (processed data)\
-  -- Code: [CM_zScore.m](CM_zScore.m)\
+  -- Code: [CM_zScore_prestim.m](CM_zScore_prestim.m)\
   -- Normalization: (x-mean(baseline))/std(baseline); baseline (-1-0 s from stimulus onset)
 ### c.	Distribution of respond-to-touch and respond-to-light block selectivity before stimulus onset
 ### d.	Distribution of tactile and visual stimulus selectivity before stimulus onset
@@ -12,4 +12,4 @@
 ### f.	Relationship between block-type selectivity before stimulus onset and tHit-tCR selectivity after stimulus onset
   -- Figure 2c-f\
   -- Input: data_array_100msBin.mat (processed data)\
-  -- Code: [CM_ROC.m](CM_ROC.m)
+  -- Code: [CM_ROC_block_stimulus.m](CM_ROC_block_stimulus.m)
