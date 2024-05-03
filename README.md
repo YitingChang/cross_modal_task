@@ -68,7 +68,8 @@ o: no (1), pre- (2), post- (3) optoinhibition \
 For example, data(1,1,1,2) includes all tactile stimulus trials in respond-to-touch blocks and optoinhibition is before stimulus onsets. \
 One means right lick is detected whereas zero does not for that trial. \
 Note: For trials without stimulus, s=3 for all catch trials, s=4 for short catch trials (0.8 sec), s=5 for long catch trials (2 sec); o=1 for ITI, o=3 for laser trials.  \
-Response window: 0~2 second from stimulus onsets.
+Response window: 0~2 second from stimulus onsets.\
+\
 o	**isPassed**: whether the baseline behavioral performance was passed the criteria (see Method). \
 \
 o	**Baseline_performance**: hit rates, block correction rates, overall correction rates, laser catch rates\
@@ -77,7 +78,8 @@ o	**trialNum_tBlock**: a 4D array (b,s,l,o) for trial number info in respond-to-
 \
 o	**trialNum_vBlock**: a 4D array (b,s,l,o) for trial number info in respond-to-light blocks.\
 \
-o	**transition_array**: a 4D logical array (b,s,l,o) for transition info in different conditions.
+o	**transition_array**: a 4D logical array (b,s,l,o) for transition info in different conditions.\
+\
 o	Code: [photoinhibition_preprocessing.m](photoinhibition_preprocessing.m)
 
 ## Analysis
