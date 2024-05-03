@@ -43,7 +43,6 @@ componentsToAnalyze = 3;
 % conversion map
 tt_Es = {[1 1 1]}; % reference: refTTT (tHit)
 tt_Fs = {[1 1 1] [2 1 3]}; % comparison: controlTTT VTN (tCR)
-% tt_Fs = {[1 1 1] [2 1 2]}; % comparison: controlTTT VTV
 Colors_E = {[0 0 1]};
 Colors_F2E = {[0.5 0.5 0.5] [0.5 0.2 0.55]};
 LineStyles_E = {'-'};
@@ -138,81 +137,42 @@ for i = 1: length(recSites)
 end
 
 %% Plot subspace overlaps for VTN and control TTT
-% figure('Position', [0 0 600 800]); 
-% for pp = 1:2 % pre-stimulus-onset vs post-stimulus-onset 
-%     subplot(2,1,pp)
-%     for i = 1: length(recSites)
-%         for comp = 1:length(tt_Fs)
-%             y= subspace_overlap_summary{i,2}(:,pp,comp);
-%             mean_y = mean(y);
-%             std_y = std(y);
-%             sem_y = std_y/length(y)^0.5;
-%             x = repmat(i+(comp-1)*0.3-0.15,length(y),1);
-%             scatter(x,y,'MarkerEdgeColor',Colors_F2E{comp});hold on;
-% %             errorbar(i+(comp-1)*0.3,mean_y,sem_y, 'o', 'Color', 'k', 'MarkerSize', 8,'MarkerEdgeColor','k',...
-% %                 'MarkerFaceColor', Colors_F2E{comp},'CapSize', 8, 'LineWidth', 1); 
-%         end
-%         NumOfSessions = length(y);
-%         x_session = [i-0.15, i+0.15];
-%         for s=1:NumOfSessions
-%             y_session = squeeze(subspace_overlap_summary{i,2}(s,pp,:));
-%             plot(x_session,y_session,'Color',[0.7 0.7 0.7])
-%         end     
-%     end
-%     xlim([0.5 4.5]);ylim([0 1]);
-%     yticks(0:0.1:1);yticklabels({0 [] 0.2 [] 0.4 [] 0.6 [] 0.8 [] 1});
-%     xticks([1:4]);xticklabels(recSite_names);
-%     if pp == 1 % Calculate subspace overlap during pre-stimulus-onset window
-%         timeWindow = initialWindow;
-%     elseif pp == 2 % Calculate subspace overlap during post-stimulus-onset window
-%         timeWindow = processingWindow;
-%     end
-%             
-%     ylabel({'Subspace overlap';[ '(' num2str(timeWindow(1)) ' to ' num2str(timeWindow(2)) ' s)']})
-%     set(gca, 'box','off','TickDir','out')
-% end
-
-%  % Save figure  
-% FigPath = fullfile(mainDir,['Subspace_overlap_control_TTT_post_VTN.pdf']);
-% print(FigPath,'-dpdf','-painters','-loose');
-
-% plot pre- and post-stimulus onset subspace overlap in one figure 
-figure('Position', [0 0 600 400]); 
-for i = 1: length(recSites)
-    % post-stimulus onset subspace overlap (TTT and VTN)
-    for comp = 1:length(tt_Fs)
-        y= subspace_overlap_summary{i,2}(:,2,comp);
-%         mean_y = mean(y);
-%         std_y = std(y);
-%         sem_y = std_y/length(y)^0.5;
-        x = repmat(i+(comp-1)*0.6-0.3,length(y),1);
-        scatter(x,y,'MarkerEdgeColor',Colors_F2E{comp});hold on;
+figure('Position', [0 0 600 800]); 
+for pp = 1:2 % pre-stimulus-onset vs post-stimulus-onset 
+    subplot(2,1,pp)
+    for i = 1: length(recSites)
+        for comp = 1:length(tt_Fs)
+            y= subspace_overlap_summary{i,2}(:,pp,comp);
+            mean_y = mean(y);
+            std_y = std(y);
+            sem_y = std_y/length(y)^0.5;
+            x = repmat(i+(comp-1)*0.3-0.15,length(y),1);
+            scatter(x,y,'MarkerEdgeColor',Colors_F2E{comp});hold on;
 %             errorbar(i+(comp-1)*0.3,mean_y,sem_y, 'o', 'Color', 'k', 'MarkerSize', 8,'MarkerEdgeColor','k',...
 %                 'MarkerFaceColor', Colors_F2E{comp},'CapSize', 8, 'LineWidth', 1); 
+        end
+        NumOfSessions = length(y);
+        x_session = [i-0.15, i+0.15];
+        for s=1:NumOfSessions
+            y_session = squeeze(subspace_overlap_summary{i,2}(s,pp,:));
+            plot(x_session,y_session,'Color',[0.7 0.7 0.7])
+        end     
     end
-    % pre-stimulus onset subspace overlap (VTN)
-    y= subspace_overlap_summary{i,2}(:,1,2);
-%     mean_y = mean(y);
-%     std_y = std(y);
-%     sem_y = std_y/length(y)^0.5;
-    x = repmat(i,length(y),1);
-    scatter(x,y,'MarkerEdgeColor',[0.8 0.5 0.85]);hold on;
-
-    NumOfSessions = length(y);
-    x_session = [i-0.3, i, i+0.3];
-    for s=1:NumOfSessions
-        y_session = [subspace_overlap_summary{i,2}(s,2,1),subspace_overlap_summary{i,2}(s,1,2),...
-            subspace_overlap_summary{i,2}(s,2,2)]; % post-stim+TTT, pre-stim+VTN, post-stim+VTN
-        plot(x_session,y_session,'Color',[0.7 0.7 0.7])
-    end     
+    xlim([0.5 4.5]);ylim([0 1]);
+    yticks(0:0.1:1);yticklabels({0 [] 0.2 [] 0.4 [] 0.6 [] 0.8 [] 1});
+    xticks([1:4]);xticklabels(recSite_names);
+    if pp == 1 % Calculate subspace overlap during pre-stimulus-onset window
+        timeWindow = initialWindow;
+    elseif pp == 2 % Calculate subspace overlap during post-stimulus-onset window
+        timeWindow = processingWindow;
+    end
+            
+    ylabel({'Subspace overlap';[ '(' num2str(timeWindow(1)) ' to ' num2str(timeWindow(2)) ' s)']})
+    set(gca, 'box','off','TickDir','out')
 end
-xlim([0.5 4.5]);ylim([0 1]);
-yticks(0:0.1:1);yticklabels({0 [] 0.2 [] 0.4 [] 0.6 [] 0.8 [] 1});
-xticks([1:4]);xticklabels(recSite_names);          
-ylabel('Subspace overlap')
-set(gca, 'box','off','TickDir','out')
+
  % Save figure  
-FigPath = fullfile(mainDir,['Subspace_overlap_control_TTT_pre_post_VTN.pdf']);
+FigPath = fullfile(mainDir,['Subspace_overlap_control_TTT_post_VTN.pdf']);
 print(FigPath,'-dpdf','-painters','-loose');
 
 
@@ -227,19 +187,6 @@ for i = 1: length(recSites)
         so_tHit_tCR{i,pp,3}= p;
     end
 end
-
-% post VTN (comparison between brain areas)
-% for i = 1: length(recSites) 
-%     tCR_A = subspace_overlap_summary{i,2}(:,2,2); 
-%     for j = (i+1):length(recSites) 
-%         tCR_B = subspace_overlap_summary{j,2}(:,2,2); 
-%         [h,p,ci,stats] = ttest2(tCR_A,tCR_B); % two-sample t test
-%         so_tCR{i,j,1}= recSites{i};
-%         so_tCR{i,j,2}= recSites{j};
-%         so_tCR{i,j,3}= mean(tCR_A)- mean(tCR_B);
-%         so_tCR{i,j,4}= p;
-%     end
-% end
 
 %% Plot subspace overlap for pre- vs post-stimulus-onset VTN
 % individual brain areas
@@ -297,91 +244,3 @@ ylim([0 1])
 FigPath = fullfile(mainDir,'subspace_overlap_pre_vs_post_VTN_all.pdf');
 print(FigPath,'-dpdf','-painters','-loose');
 
-%% Plot subspace overlaps for VTN based on their pre-stimulus distance
-% % pre-stimulus distance results: summary
-% % Get close and far groups
-% percentile = 50;
-% pre_stim_all = [];
-% for i = 1: length(recSites)
-%     summary_recSite = summary{i,2};
-%     for session=1:size(summary_recSite,1)
-%         distance_session = cell2mat(reshape(summary_recSite{session,5},[],1));
-%         distance_mean = mean(distance_session,1);
-%         pre_stim_distance(session,1) = mean(distance_mean(initialOn_Bin:initialOff_Bin));
-%     end 
-%     
-%     pre_stim_all = [pre_stim_all; pre_stim_distance];
-%     clear pre_stim_distance 
-% end
-% 
-% pre_stim_close = pre_stim_all <= prctile(pre_stim_all,percentile);
-% pre_stim_far = pre_stim_all >= prctile(pre_stim_all,100-percentile);
-% 
-% session_start = 1;
-% figure('Position', [0 0 600 400]); 
-% so_close = [];
-% so_far = [];
-% for i = 1: length(recSites)
-%     distance_summary_recSite = summary{i,2};
-%     isSession = cell2mat(cellfun(@(x) x>10, distance_summary_recSite(:,4), 'UniformOutput',false));
-%     session_end = session_start + length(isSession) -1;
-%     pre_stim_recSite = pre_stim_all(session_start:session_end);
-%     pre_stim_close_recSite = pre_stim_close(session_start:session_end);
-%     session_start = session_start + sum(isSession);
-%     is_close = pre_stim_close_recSite(isSession);
-%     
-%     y= subspace_overlap_summary{i,2}(:,2,2);
-%     x = repmat(i,length(y),1);
-%     scatter(x,y,'MarkerEdgeColor','b');hold on;
-%     scatter(x(is_close),y(is_close),'MarkerEdgeColor','r');
-%     
-%     so_close = [so_close; y(is_close)];
-%     so_far = [so_far; y(~is_close)];
-% end
-% 
-% [h,p,ci,stats] = ttest2(so_close, so_far);
-% 
-% xlim([0.5 4.5]);ylim([0 1]);
-% yticks(0:0.1:1);yticklabels({0 [] 0.2 [] 0.4 [] 0.6 [] 0.8 [] 1});
-% xticks([1:4]);xticklabels(recSite_names);
-% ylabel({'Subspace overlap';[ '(' num2str(processingWindow(1)) ' to ' num2str(processingWindow(2)) ' s)']})
-% set(gca, 'box','off','TickDir','out')
-% 
-% % Save figure  
-% FigPath = fullfile(mainDir,['Subspace_overlap_post_VTN_close_far_groups.pdf']);
-% print(FigPath,'-dpdf','-painters','-loose');
-% 
-% 
-% session_start = 1;
-% X=[];
-% Y=[];
-% figure('Position', [0 0 600 400]); 
-% for i = 1: length(recSites)
-%     distance_summary_recSite = summary{i,2};
-%     isSession = cell2mat(cellfun(@(x) x>10, distance_summary_recSite(:,4), 'UniformOutput',false));
-%     session_end = session_start + length(isSession) -1;
-%     pre_stim_recSite = pre_stim_all(session_start:session_end);
-%     pre_stim_close_recSite = pre_stim_close(session_start:session_end);
-%     session_start = session_start + sum(isSession);
-%     is_close = pre_stim_close_recSite(isSession);
-%     
-%     y= subspace_overlap_summary{i,2}(:,2,2);
-%     x = pre_stim_recSite(isSession);
-%     X = [X;x];
-%     Y=[Y;y];
-% end
-% scatter(X,Y,40,'MarkerEdgeColor',[0.5 0.5 0.5], 'LineWidth', 0.1);hold on;
-% ls = lsline;hold on;
-% ls.Color = 'k';
-% [F,P] = corrcoef(X,Y);
-% title(['r = ' num2str(round(F(1,2),2)) '; p = ' num2str(round(P(1,2),6))])
-% ylim([0 1]);
-% yticks(0:0.1:1);yticklabels({0 [] 0.2 [] 0.4 [] 0.6 [] 0.8 [] 1});
-% xlabel('Pre-stimulus distance')
-% ylabel('Subspace overlap')
-% set(gca, 'box','off','TickDir','out')
-% 
-% 
-% % Save figure  
-% FigPath = fullfile(mainDir,['Subspace_overlap_vs_preStim_distance.pdf']);
-% print(FigPath,'-dpdf','-painters','-loose');
