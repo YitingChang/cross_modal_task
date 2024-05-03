@@ -12,4 +12,5 @@
 ### f.	Relationship between block-type selectivity before stimulus onset and tHit-tCR selectivity after stimulus onset
   -- Figure 2c-f\
   -- Input: data_array_100msBin.mat (processed data)\
+  -- Output: Unit_AUC_BP_100msBin_1000nBoot_-1to2p5.mat, Unit_AUC_SP_100msBin_1000nBoot_-p3top3.mat (processed data)\
   -- Code: [CM_ROC_block_stimulus.m](CM_ROC_block_stimulus.m)
