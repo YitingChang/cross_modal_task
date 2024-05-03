@@ -29,7 +29,7 @@ NumTrees = 500;
 
 %% True and shuffled classification accuracy (session)
 % Built-in cross-validation. 
-% Chang et al., Fig 3e and S3
+% Chang et al., Fig 3 and S3
 for binNum= binStart:binEnd
     for i = 1: length(recSites)
         u = table2cell(data_all(strcmp(data_all.recSite, recSites{i}), :));
@@ -147,7 +147,7 @@ mainDir = 'E:\CM_NeuralActivity_Analysis\Classification\CorrectTrials\Trial_by_T
 load([mainDir 'Avg_across_sessions\stimulus_window_0top1\LDA_accuracy_10CV_true&shuffled_buit-inCV_mergedL&Rlicks.mat'])
 
 % block, stimulus, decision 
-% Chang et al., Fig S3
+% Chang et al., Fig 3 and S3
 figure('Position', [0 0 800 550])
 for i = 1: length(recSites)
     for comp = 1:length(component_names)
@@ -200,7 +200,7 @@ print(caFigPath,'-dpdf','-painters','-loose');
 
 
 % block
-% Chang et al., Fig 3e
+% Chang et al., Fig 3b
 figure('Position', [0 0 400 400])
 for i = 1: length(recSites)
     subplot(2,2,i)
@@ -240,7 +240,7 @@ print(caFigPath,'-dpdf','-painters','-loose');
 % To prevent the same trials shown in train and test datasets after bootstrapping, we first perform cross-validation partition and
 % then bootstrap trials within train and test datasets seperately. 
 % For each bootstrapping, classification accuracy is avergaed across sessions.
-% Chang et al., Fig 3f and S3
+% Chang et al., Fig 3c-e and S3
 
 for binNum= binStart:binEnd   
     for i = 1: length(recSites)
@@ -405,7 +405,7 @@ caFigPath = fullfile(mainDir,'Avg_across_sessions','pre_stimulus_window_-p1to0',
 print(caFigPath,'-dpdf','-painters','-loose');
 
 %% Example session
-% Chang et al., Fig 3d
+% Chang et al., Fig 3a
 % The fitcdiscr (matlab nuilt-in function for LDA) function uses Bayesian approach not dimension reduction, 
 % so the projeciton matrix is not in the outputs of fitcdiscr. This approach focuses on classificaiton not dimension reduction.
 % To visualize the projections, dimension reduction is applied. 
