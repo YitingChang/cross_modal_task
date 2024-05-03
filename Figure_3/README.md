@@ -5,5 +5,5 @@
 ## d.	Classification accuracy of stimulus types before stimulus onset
 ## e.	Classification accuracy of stimulus types after stimulus onset
   -- Figure 3a-e\
-  -- Input: AllTrials_100bin_noSmooth\ data_array.mat (processed data)\
+  -- Input: data_array_100msBin.mat (processed data)\
   -- Code: [CM_Classification_correctTrials.m](CM_Classification_correctTrials.m)
