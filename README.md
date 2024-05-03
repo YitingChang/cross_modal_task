@@ -55,7 +55,7 @@ o	The task structure was recorded via the Bcontrol system (.mat)
 ### Preprocessed data
 o	Behavior, stimulus, and laser signals were extracted and combined in MSessionExplorer, a trial-based system for data organization.\ 
 o	Session information including mouse name, date of birth, brain area was added to MSessionExplorer.\
-o	Code: [photoinhibition_ preprocessing.m](photoinhibition_ preprocessing.m) 
+o	Code: [photoinhibition_preprocessing.m](photoinhibition_preprocessing.m)
 ### Processed data
 o	A table contains processed data for each session.\
 \
@@ -80,7 +80,7 @@ o	**trialNum_vBlock**: a 4D array (b,s,l,o) for trial number info in respond-to-
 \
 o	**transition_array**: a 4D logical array (b,s,l,o) for transition info in different conditions.\
 \
-o	Code: [photoinhibition_preprocessing.m](photoinhibition_preprocessing.m)
+o	Code: [photoinhibition_processing.m](photoinhibition_processing.m)
 
 ## Analysis
 Scripts used to analyze the data and to generate figures in our preprint can be found in the figure folders.
