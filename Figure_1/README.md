@@ -18,5 +18,5 @@
   -- Normalization: (x-mean(baseline))/std(baseline); baseline (-1-0 s from stimulus onset)
 ### h.	Distribution of the tHit and tCR selectivity.
   -- Input: data_array_10msBin.mat (processed data)\
-  -- Output: Unit_AUC_tCorrect_1000nBoot.mat (processed data)
+  -- Output: Unit_AUC_tCorrect_1000nBoot.mat (processed data)\
   -- Code: [CM_ROC_tHit_tCR.m](CM_ROC_tHit_tCR.m)
