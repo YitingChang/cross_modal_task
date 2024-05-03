@@ -508,7 +508,7 @@ seedNum = [1 2 3 4 5 6 7];
     save(photoInhPaths, 'delta_sensitivity_bootstrapped'); 
 %     clear delta_sensitivity_bootstrapped
 % end       
-%% Figure 5C
+%% Chang et al Figure 6e-g
 % delta sensitivity
 % analysis setting
 load('E:\CM_Photoinhibition_Analysis\Tactile_detection\delta_sensitivity_bootstrapped_PV-Cre-Ai32')

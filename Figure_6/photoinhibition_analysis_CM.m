@@ -606,7 +606,7 @@ fig = gcf;
 inhFigPath = fullfile(save_path,'CM_inhibition_delta_sensitivity.pdf');
 print(inhFigPath,'-dpdf','-painters','-loose'); 
 
-%% Figure 5B
+%% Figure 6b-d
 % delta sensitivity in the respond-to-touch blocks
 % analysis setting
 load('E:\CM_Photoinhibition_Analysis\Cross_modal_task\Performance_control\delta_sensitivity_bootstrapped_PV-Cre-Ai32')
@@ -653,7 +653,7 @@ fig = gcf;
 inhFigPath = fullfile(save_path,'CM_inhibition_delta_sensitivity_vBlock.pdf');
 print(inhFigPath,'-dpdf','-painters','-loose'); 
 
-%% Figure 5E
+%% Figure 6i
 % delta right lick probability of short laser catch trials in respond-to-touch blocks
 % analysis setting
 load('E:\CM_Photoinhibition_Analysis\Cross_modal_task\Performance_control\photoinhibition_bootstrapped_PV-Cre-Ai32')
