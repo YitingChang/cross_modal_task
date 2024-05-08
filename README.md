@@ -86,7 +86,8 @@ o	Code: [photoinhibition_processing.m](photoinhibition_processing.m)
 Scripts used to analyze the data and to generate figures in our preprint can be found in the figure folders.
 
 ## Contact
-Data will be available in [DANDI](https://www.dandiarchive.org/) soon.
+The preprocessed data is converted to the [Neurodata Without Borders (NWB)](https://www.nwb.org/) format and will be available in [DANDI](https://www.dandiarchive.org/) soon.
+The processed data will also be available.
 
 If you have any questions or want to request our datasets, please contact:\
 Yi-Ting Chang (ytchang[at]jhmi.edu)
