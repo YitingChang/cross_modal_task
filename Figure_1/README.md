@@ -1,6 +1,7 @@
 
 ## Figure 1. Touch-evoked activity of individual neurons is modulated by task rules.
 <img src="Figure 1.jpg" width="800">
+
 ### a.	Schematic of the cross-modal selection task.
 ### b.	Example behavioral session.
   -- Input: YT084_200124_se.mat (preprocessed data)\

@@ -1,4 +1,6 @@
 ## Figure_6–figure supplement_1 Hit and false alarm rates during the inhibition of population states in the dorsal cortex. 
+<img src="Figure 6—figure supplement 1.jpg" width="800">
+
 ### a.	Schematic of inhibition within tactile stimulus trials during respond-to-touch blocks in the cross-modal selection task. 
 ### b.	Changes in tactile hit rate when each cortical area was optogenetically inhibited before stimulus onset. 
 ### c.	Changes in tactile hit rate when each cortical area was optogenetically inhibited after stimulus onset. 

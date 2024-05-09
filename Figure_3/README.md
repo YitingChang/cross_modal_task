@@ -1,4 +1,6 @@
 ## Figure 3. Pre-stimulus states of neural populations are rule-dependent. 
+<img src="Figure 3.jpg" width="800">
+
 ### a.	Example session
 ### b.	Distribution of classification accuracy of task rule
 ### c.	Classification accuracy of task rules before stimulus onset

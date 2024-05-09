@@ -1,4 +1,6 @@
 ## Figure_6–figure supplement_2 Inhibition of pre-stimulus states in the medial motor cortex impairs rule-dependent visual detection. 
+<img src="Figure 6—figure supplement 2.jpg" width="800">
+
 ### a. Schematic of inhibition within visual stimulus trials during the respond-to-light blocks in the cross-modal selection task. 
 ### b. Changes in visual hit rate when each cortical area was optogenetically inhibited before stimulus onset. 
 ### c. Changes in visual hit rate when each cortical area was optogenetically inhibited after stimulus onset. 

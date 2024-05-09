@@ -1,4 +1,6 @@
 ## Figure_1-figure supplement_1 Additional examples of single-unit responses during the cross-modal selection task. 
+<img src="Figure 1—figure supplement 1.jpg" width="800">
+
 ### a.	S1 example unit
   -- Input: YT084_200201_se.mat (preprocessed data) unit # 124
 ### b.	S1 example unit

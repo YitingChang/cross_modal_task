@@ -1,4 +1,6 @@
 ## Figure 4. Pre-stimulus states predict subsequent tactile processing. 
+<img src="Figure 4.jpg" width="800">
+
 ### a.	Schematic of distance between tHit and tCR trajectories. 
 ### b.	Distance between tHit and tCR trajectories in sensory and motor cortical areas.  
 ### c.	Distance between tHit and tCR trajectories sorted based on pre-stimulus states.

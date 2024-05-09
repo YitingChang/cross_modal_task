@@ -1,4 +1,6 @@
 ## Figure 5. Pre-stimulus states of the motor cortical areas track behavioral rule switching. 
+<img src="Figure 5.jpg" width="800">
+
 ### a. Probabilities of licking during block transitions
   -- Input: lickProb_rule_trans.mat (processed data)\
   -- Code:  [CM_lickProb_rule_trainsition.m](CM_lickProb_rule_trainsition.m)

@@ -1,4 +1,6 @@
-## Figure_4–figure supplement_1 Stimulus and choice coding dimensions in respond-to-touch and respond-to-light blocks.
+## Figure 4-figure supplement 1 Stimulus and choice coding dimensions in respond-to-touch and respond-to-light blocks.
+<img src="Figure 4â€”figure supplement 1.jpg" width="800">
+
 ### a.	Population activity projected on the stimulus coding dimension (CD) in respond-to-touch blocks. 
 ### b.     Population activity projected on the stimulus coding dimension in respond-to-light blocks. 
 ### c.	Population activity projected on the choice coding dimension in respond-to-touch blocks. 

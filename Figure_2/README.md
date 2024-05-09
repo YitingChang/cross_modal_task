@@ -1,4 +1,6 @@
 ## Figure 2. Single-unit activity before stimulus delivery reflects task rules.
+<img src="Figure 2.jpg" width="800">
+
 ### a.	Example units
   -- Input:  YT071_190721_se.mat (preprocessed data) unit 19, EF0151_190506_se.mat (preprocessed data) unit 108\
   -- Code: [CM_RasterPlot_prestim.m](CM_RasterPlot_prestim.m)
