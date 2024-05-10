@@ -3,9 +3,9 @@ This repository contains methods to analyze single-neuron activity, neural popul
 
 ## Summary
 Yi-Ting Chang, Eric A. Finkel, Duo Xu, Daniel H. O’Connor\
-Johns Hopkins University\
+Johns Hopkins University
 
-Flexible responses to sensory stimuli based on changing rules are critical for adapting to a dynamic environment. However, it remains unclear how the brain encodes rule information and uses this information to guide behavioral responses to sensory stimuli. Here, we made single-unit recordings while head-fixed mice performed a cross-modal sensory selection task in which they switched between two rules in different blocks of trials: licking in response to tactile stimuli applied to a whisker while rejecting visual stimuli, or licking to visual stimuli while rejecting the tactile stimuli. Along a cortical sensorimotor processing stream including the primary (S1) and secondary (S2) somatosensory areas, and the medial (MM) and anterolateral (ALM) motor areas, the single-trial activity of individual neurons distinguished between the two rules both prior to and in response to the tactile stimulus. Variable rule-dependent responses to identical stimuli could in principle occur via appropriate configuration of pre-stimulus preparatory states of a neural population, which would shape the subsequent response. We hypothesized that neural populations in S1, S2, MM and ALM would show preparatory activity states that were set in a rule-dependent manner to cause processing of sensory information according to the current rule. This hypothesis was supported for the motor cortical areas by findings that (1) the current task rule could be decoded from pre-stimulus population activity in ALM and MM; (2) neural subspaces containing the population activity differed between the two rules both prior to the stimulus and during the stimulus-evoked response; and (3) optogenetic disruption of pre-stimulus states within ALM and MM impaired task performance. Our findings indicate that flexible selection of an appropriate action in response to a sensory input can occur via configuration of preparatory states in the motor cortex.
+Flexible responses to sensory stimuli based on changing rules are critical for adapting to a dynamic environment. However, it remains unclear how the brain encodes and uses rule information to guide behavior. Here, we made single-unit recordings while head-fixed mice performed a cross-modal sensory selection task where they switched between two rules: licking in response to tactile stimuli while rejecting visual stimuli, or vice versa. Along a cortical sensorimotor processing stream including the primary (S1) and secondary (S2) somatosensory areas, and the medial (MM) and anterolateral (ALM) motor areas, single-neuron activity distinguished between the two rules both prior to and in response to the tactile stimulus. We hypothesized that neural populations in these areas would show rule-dependent preparatory states, which would shape the subsequent sensory processing and behavior. This hypothesis was supported for the motor cortical areas (MM and ALM) by findings that (1) the current task rule could be decoded from pre-stimulus population activity; (2) neural subspaces containing the population activity differed between the two rules; and (3) optogenetic disruption of pre-stimulus states impaired task performance. Our findings indicate that flexible action selection in response to sensory input can occur via configuration of preparatory states in the motor cortex. 
 
 **Hightlights**
 
@@ -85,10 +85,11 @@ o	Code: [photoinhibition_processing.m](photoinhibition_processing.m)
 ## Analysis
 Scripts used to analyze the data and to generate figures in our preprint can be found in the figure folders.
 
-## Contact
-The preprocessed data is converted to the [Neurodata Without Borders (NWB)](https://www.nwb.org/) format and will be available in [DANDI](https://www.dandiarchive.org/) soon.
-The processed data will also be available.
+## Data availability
+The preprocessed data converted to the [Neurodata Without Borders (NWB)](https://www.nwb.org/) format is available at [DANDI archive](https://doi.org/10.48324/dandi.000232/0.240510.2038).\
+The processed data is available at [Zenodo](https://zenodo.org/records/11176244). 
 
+## Contact
 If you have any questions or want to request our datasets, please contact:\
 Yi-Ting Chang (ytchang[at]jhmi.edu)
 
