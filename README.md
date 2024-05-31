@@ -1,5 +1,5 @@
 # cross_modal_task
-This repository contains methods to analyze single-neuron activity, neural population activity, and animal behaviors in a cross-modal sensory selection task. The findings are shown in our preprint: [Rule-based modulation of a sensorimotor transformation across cortical areas](https://doi.org/10.1101/2023.08.21.554194).
+This repository contains methods to analyze single-neuron activity, neural population activity, and animal behaviors in a cross-modal sensory selection task. The findings are shown in Chang Yi-Ting, Finkel Eric A., Xu Duo, O’Connor Daniel H. (2023) Rule-based modulation of a sensorimotor transformation across cortical areas [eLife 12:RP92620](https://doi.org/10.7554/eLife.92620.2).
 
 ## Summary
 Yi-Ting Chang, Eric A. Finkel, Duo Xu, Daniel H. O’Connor\
